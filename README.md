@@ -1,6 +1,8 @@
 # tuyapi sniffer
 
-Builds a Docker image running the [https://github.com/TuyaAPI/cli](tuyapi/cli) to extract keys and IDs of Tuya devices.
+Builds a Docker image running the [tuyapi/cli](https://github.com/TuyaAPI/cli) to extract keys and IDs of Tuya devices.
+
+This image targets ARM 32-bit architectures like the Raspberry Pi family. For x86, just change the `FROM` command to use a x86 base image.
 
 ## Usage
 
@@ -25,4 +27,4 @@ Builds a Docker image running the [https://github.com/TuyaAPI/cli](tuyapi/cli) t
 - Open the Smart Switch app and pull down the devices list to refresh them.
 - IDs and keys should show up in the terminal.
 
-If you have any questions or problems with the process itself, please refer to the [https://github.com/codetheweb/tuyapi/blob/master/docs/SETUP.md](original sources).
+If you have any questions or problems with the process itself, please refer to the [original sources](https://github.com/codetheweb/tuyapi/blob/master/docs/SETUP.md).
