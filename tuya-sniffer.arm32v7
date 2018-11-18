@@ -1,0 +1,11 @@
+FROM arm32v7/node:slim
+MAINTAINER Paul Genssler <derp@mailbox.org>
+
+RUN npm i @tuyapi/cli -g
+RUN npm i anyproxy -g 
+RUN anyproxy-ca -g
+
+EXPOSE 8001
+LABEL description="docker run --rm --name tuya-sniffer -p 8001:8001 -it tuya-sniffer:arm32v7"
+
+ENTRYPOINT tuya-cli list-app
