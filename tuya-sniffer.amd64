@@ -1,0 +1,10 @@
+FROM amd64/node:latest
+MAINTAINER Paul Genssler <derp@mailbox.org>
+
+RUN npm i @tuyapi/cli -g
+RUN npm i anyproxy -g 
+RUN anyproxy-ca -g
+
+LABEL description="docker run --rm --name tuya-sniffer --net=host -it tuya-sniffer:amd64"
+
+ENTRYPOINT tuya-cli list-app
